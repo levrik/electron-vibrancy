@@ -83,22 +83,6 @@ namespace Vibrancy {
                 }
                 FreeLibrary(hModule);
             }
-        } else {
-            HRESULT hr = S_OK;
-
-            // Create and populate the Blur Behind structure
-            DWM_BLURBEHIND bb = { 0 };
-
-            // Enable Blur Behind and apply to the entire client area
-            bb.dwFlags = DWM_BB_ENABLE;
-            bb.fEnable = true;
-            bb.hRgnBlur = NULL;
-
-            // Apply Blur Behind
-            hr = DwmEnableBlurBehindWindow(hwnd, &bb);
-            if (SUCCEEDED(hr)) {
-                result = true;
-            }
         }
         return result;
     }

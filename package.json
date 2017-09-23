@@ -18,6 +18,7 @@
     "nan": "^2.7.0",
     "node-gyp": "^3.6.1"
   },
+  "os": ["win32"],
   "scripts": {
     "test-spectron": "mocha --compilers coffee:coffee-script/register ./spec/vibrancy-spec.coffee",
     "test-module": "mocha --compilers coffee:coffee-script/register ./spec/module-spec.coffee",
