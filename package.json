@@ -4,14 +4,8 @@
   "description": "Enable blurring the back of your transparent BrowserWindow using this simple module.",
   "main": "index.js",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "chai-as-promised": "^6.0.0",
-    "coffee-script": "^1.12.7",
-    "coffeelint": "^1.16.0",
     "electron": "1.7.6",
-    "mocha": "^3.5.3",
-    "node-pre-gyp": "^0.6.38",
-    "spectron": "^3.7.2"
+    "node-pre-gyp": "^0.6.38"
   },
   "dependencies": {
     "bindings": "^1.3.0",
@@ -20,15 +14,10 @@
   },
   "os": ["win32"],
   "scripts": {
-    "test-spectron": "mocha --compilers coffee:coffee-script/register ./spec/vibrancy-spec.coffee",
-    "test-module": "mocha --compilers coffee:coffee-script/register ./spec/module-spec.coffee",
     "run-test-app": "./node_modules/.bin/electron ./spec/app",
     "lint-cpp": "python scripts/lint.py",
-    "lint-coffee": "coffeelint spec",
     "rebuild": "node-gyp rebuild --target=1.7.6 --runtime=electron --arch=x64 --debug --dist-url=https://atom.io/download/electron",
     "build": "node-gyp build --target=1.7.6 --runtime=electron --arch=x64 --debug --dist-url=https://atom.io/download/electron",
-    "nrebuild": "node-gyp rebuild --debug --arch=x64 --verbose",
-    "nbuild": "node-gyp build --debug",
     "conf": "node-gyp configure --arch=x64",
     "postinstall": "npm run rebuild"
   },
