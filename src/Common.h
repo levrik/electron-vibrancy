@@ -1,6 +1,6 @@
 //----------------------------------------------------------------------------
 // electron-vibrancy
-// Copyright 2016 arkenthera
+// Copyright 2017 Levin Rickert, 2016 arkenthera
 //
 // MIT License
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,9 +38,6 @@
 #define PLATFORM_LINUX
 #elif defined(__APPLE__)
 #define PLATFORM_OSX
-#import <Foundation/Foundation.h>
-#import <AppKit/AppKit.h>
-#import <objc/objc-runtime.h>
 #endif
 
 #include <map>

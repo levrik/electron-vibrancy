@@ -1,6 +1,6 @@
 //----------------------------------------------------------------------------
 // electron-vibrancy
-// Copyright 2016 arkenthera
+// Copyright 2017 Levin Rickert, 2016 arkenthera
 //
 // MIT License
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,10 +37,6 @@ namespace Vibrancy {
         ~Vibrancy();
 
         static NAN_METHOD(SetVibrancy);
-
-        static NAN_METHOD(AddView);
-        static NAN_METHOD(RemoveView);
-        static NAN_METHOD(UpdateView);
         VibrancyHelper helper_;
     };
 }  // namespace Vibrancy

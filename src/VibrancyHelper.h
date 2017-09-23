@@ -1,6 +1,6 @@
 //----------------------------------------------------------------------------
 // electron-vibrancy
-// Copyright 2016 arkenthera
+// Copyright 2017 Levin Rickert, 2016 arkenthera
 //
 // MIT License
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,24 +34,8 @@ namespace Vibrancy {
      public:
         VibrancyHelper();
         ~VibrancyHelper() { }
+        bool EnableVibrancy(unsigned char* buffer);
         bool DisableVibrancy(unsigned char* buffer);
-        #ifdef PLATFORM_OSX
-            struct ViewOptions {
-                int ViewId;
-                int ResizeMask;
-                int Width;
-                int Height;
-                int X;
-                int Y;
-                int Material;
-            };
-            ViewOptions GetOptions(v8::Local<v8::Array> options);
-            std::map<int, NSVisualEffectView* > views_;
-            int viewIndex_;
-        #endif
-        int32_t AddView(unsigned char* buffer, v8::Local<v8::Array> options);
-        bool UpdateView(unsigned char* buffer, v8::Local<v8::Array> options);
-        bool RemoveView(unsigned char* buffer, v8::Local<v8::Array> options);
     };
 }  // namespace Vibrancy
 //----------------------------------------------------------------------------

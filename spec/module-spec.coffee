@@ -27,9 +27,9 @@ dummyBrowserWindow =
 describe 'Module General', ->
   vibrancy = require(path.join(__dirname,'..'))
 
-  it 'SetVibrancy with no buffer argument should return -1',->
-    result = vibrancy.SetVibrancy()
-    result.should.be.equal(-1)
+  it 'SetVibrancy with no buffer argument should return false',->
+    result = vibrancy.enableVibrancy()
+    result.should.be.equal(false)
 
 
   #it 'SetVibrancy should return Integer',->
